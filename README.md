@@ -39,6 +39,8 @@ Node `^5.0.0`
 Features
 --------
 
+* [TypeScript](http://www.typescriptlang.org) (`1.7.5`)
+  * Add compile-time type checking to ES6 JavaScript
 * [React](https://github.com/facebook/react) (`^0.14.0`)
   * Includes react-addons-test-utils (`^0.14.0`)
 * [Redux](https://github.com/rackt/redux) (`^3.0.0`)
@@ -70,7 +72,6 @@ Features
 * [ESLint](http://eslint.org)
   * Uses [Standard Style](https://github.com/feross/standard) by default, but you're welcome to change this!
   * Includes separate test-specific `.eslintrc` to work with Mocha and Chai
-* [Flow](http://www.flowtype.org)
 
 Getting Started
 ---------------
@@ -78,8 +79,8 @@ Getting Started
 Just clone the repo and install the necessary node modules:
 
 ```shell
-$ git clone https://github.com/davezuko/react-redux-starter-kit.git
-$ cd react-redux-starter-kit
+$ git clone https://github.com/adamburmister/react-redux-typescript-starter-kit.git
+$ cd react-redux-typescript-starter-kit
 $ npm install                   # Install Node modules listed in ./package.json (may take a while the first time)
 $ npm start                     # Compile and launch
 ```
@@ -98,6 +99,7 @@ Before delving into the descriptions of each available npm script, here's a brie
 Great, now that introductions have been made here's everything in full detail:
 
 * `npm start` - Spins up Koa server to serve your app at `localhost:3000`. HMR will be enabled in development.
+* `npm run tsd` - Install all TypeScript definitions required by the project.
 * `npm run compile` - Compiles the application to disk (`~/dist` by default).
 * `npm run dev:nw` - Same as `npm start`, but opens the redux devtools in a new window.
 * `npm run dev:no-debug` - Same as `npm start` but disables redux devtools.
@@ -147,7 +149,7 @@ The folder structure provided is only meant to serve as a guide, it is by no mea
 │   ├── static               # Static assets (not imported anywhere in source code)
 │   ├── styles               # Application-wide styles (generally settings)
 │   ├── views                # Components that live at a route
-│   └── main.js              # Application bootstrap and rendering
+│   └── main.tsx             # Application bootstrap and rendering
 └── tests                    # Unit tests
 ```
 

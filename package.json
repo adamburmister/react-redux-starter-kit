@@ -9,6 +9,7 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
+    "tsd": "tsd reinstall",
     "compile": "node -r dotenv/config --harmony bin/compile",
     "lint": "eslint . ./",
     "lint:fix": "npm run lint -- --fix",
@@ -97,6 +98,8 @@
     "sinon": "^1.17.2",
     "sinon-chai": "^2.8.0",
     "style-loader": "^0.13.0",
+    "ts-loader": "^0.7.2",
+    "typescript": "^1.7.5",
     "url-loader": "^0.5.6",
     "webpack": "^1.12.9"
   }

@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "jsx": "preserve",
+    "module": "commonjs",
+    "noEmit": true,
+    "noEmitOnError": true,
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5"
+  },
+  "exclude": [
+    "dist",
+    "node_modules"
+  ],
+  "files": [
+    "typings/tsd.d.ts",
+    "custom_typings/redux-simple-router.d.ts",
+    "src/main.tsx"
+  ]
+}

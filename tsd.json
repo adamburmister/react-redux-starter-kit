@@ -1,0 +1,66 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "react/react.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    },
+    "react/react-global.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    },
+    "react/react-dom.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    },
+    "react/react-addons-css-transition-group.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    },
+    "react/react-addons-transition-group.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    },
+    "react/react-addons-create-fragment.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    },
+    "react/react-addons-perf.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    },
+    "react/react-addons-linked-state-mixin.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    },
+    "react/react-addons-pure-render-mixin.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    },
+    "react/react-addons-test-utils.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    },
+    "react/react-addons-update.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    },
+    "history/history.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    },
+    "react-router/history.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    },
+    "react-router/react-router.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    },
+    "redux/redux.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    },
+    "react-redux/react-redux.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    },
+    "requirejs/require.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    },
+    "redux-thunk/redux-thunk.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    },
+    "redux-actions/redux-actions.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    }
+  }
+}
