@@ -23,7 +23,7 @@ const webpackConfig = {
   target: 'web',
   entry: {
     app: [
-      paths.base(config.dir_client) + '/main.js'
+      paths.base(config.dir_client) + '/main.tsx'
     ],
     vendor: config.compiler_vendor
   },
@@ -46,11 +46,13 @@ const webpackConfig = {
         collapseWhitespace: true
       }
     }),
-    new webpack.ProvidePlugin(config.compiler_globals)
+    new webpack.ProvidePlugin(config.compiler_globals),
+    new webpack.optimize.UglifyJsPlugin()
   ],
+  devtool: 'source-map',
   resolve: {
     root: paths.base(config.dir_client),
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.ts', '.tsx']
   },
   module: {
     preLoaders: [
@@ -61,6 +63,10 @@ const webpackConfig = {
       }
     ],
     loaders: [
+      {
+        test: /\.ts|tsx$/,
+        loader: 'ts-loader'
+      },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
