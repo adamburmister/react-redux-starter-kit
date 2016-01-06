@@ -98,6 +98,7 @@ Before delving into the descriptions of each available npm script, here's a brie
 Great, now that introductions have been made here's everything in full detail:
 
 * `npm start` - Spins up Koa server to serve your app at `localhost:3000`. HMR will be enabled in development.
+* `npm run tsd` - Install all TypeScript definitions required by the project.
 * `npm run compile` - Compiles the application to disk (`~/dist` by default).
 * `npm run dev:nw` - Same as `npm start`, but opens the redux devtools in a new window.
 * `npm run dev:no-debug` - Same as `npm start` but disables redux devtools.
