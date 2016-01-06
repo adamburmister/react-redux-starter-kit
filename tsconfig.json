@@ -15,7 +15,7 @@
   ],
   "files": [
     "typings/tsd.d.ts",
-    "lib/redux-simple-router.d.ts",
+    "custom_typings/redux-simple-router.d.ts",
     "src/main.tsx"
   ]
 }
