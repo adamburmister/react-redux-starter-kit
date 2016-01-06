@@ -70,6 +70,7 @@ Features
 * [ESLint](http://eslint.org)
   * Uses [Standard Style](https://github.com/feross/standard) by default, but you're welcome to change this!
   * Includes separate test-specific `.eslintrc` to work with Mocha and Chai
+* [Flow](http://www.flowtype.org)
 
 Getting Started
 ---------------

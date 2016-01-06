@@ -1,0 +1,9 @@
+[ignore]
+.*/.git/.*
+.*/node_modules/.*
+
+[include]
+
+[libs]
+
+[options]
