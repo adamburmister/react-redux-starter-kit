@@ -148,7 +148,7 @@ The folder structure provided is only meant to serve as a guide, it is by no mea
 │   ├── static               # Static assets (not imported anywhere in source code)
 │   ├── styles               # Application-wide styles (generally settings)
 │   ├── views                # Components that live at a route
-│   └── main.js              # Application bootstrap and rendering
+│   └── main.tsx             # Application bootstrap and rendering
 └── tests                    # Unit tests
 ```
 
