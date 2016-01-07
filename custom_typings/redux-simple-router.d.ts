@@ -1,7 +1,7 @@
-declare module "redux-simple-router" {
+declare module 'redux-simple-router' {
 
-    function syncReduxAndRouter(history: any, store: any, selectRouterState?: Function): void;
+    export function syncReduxAndRouter(history: any, store: any, selectRouterState?: Function): void;
 
-    function routeReducer(): any;
+    export function routeReducer(): any;
 
 }

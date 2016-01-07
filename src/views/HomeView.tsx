@@ -21,6 +21,10 @@ const mapStateToProps = (state: any) => ({
   counter: state.counter
 })
 export class HomeView extends React.Component<IHomeViewProps, {}> {
+  constructor(props) {
+    super(props)
+  }
+
   render () {
     return (
       <div className='container text-center'>

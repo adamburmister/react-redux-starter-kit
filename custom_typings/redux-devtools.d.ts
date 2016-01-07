@@ -1,15 +1,23 @@
-/// <reference path="../typings/react/react.d.ts" />
-/// <reference path="../typings/redux/redux.d.ts" />
+/// <reference path='../typings/react/react.d.ts' />
+/// <reference path='../typings/redux/redux.d.ts' />
 
 // Type definitions for redux-devtools 3.0.0
+// Project: https://github.com/gaearon/redux-devtools
+// Definitions by: Petryshyn Sergii <https://github.com/mc-petry>
+// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
+
 declare module 'redux-devtools' {
-  export function createDevTools(monitor: any);
-}
+  import * as React from 'react'
 
-declare module 'redux-devtools-log-monitor' {
-  export default class LogMonitor extends React.Component<any, any> { }
-}
+  interface IDevTools {
+    new (): JSX.ElementClass
+    instrument(): Function
+  }
 
-declare module 'redux-devtools-dock-monitor' {
-  export default class DocMonitor extends React.Component<any, any> { }
+  export function createDevTools(el: React.ReactElement<any>): IDevTools
+  export function persistState(debugSessionKey: string): Function
+
+  var factory: { instrument(): Function }
+
+  export default factory;
 }

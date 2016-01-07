@@ -32,16 +32,8 @@ export const actions = {
 // ------------------------------------
 // Reducer
 // ------------------------------------
-// export default handleActions({
-//   [COUNTER_INCREMENT]: (state:Number, { payload }:ReduxActions.Action): Number => {
-//     return state + payload
-//   }
-// }, 1)
-
-let reducer = handleActions({
-  [COUNTER_INCREMENT]: function (state: Number, action): Number {
+export default handleActions({
+  [COUNTER_INCREMENT]: (state: Number, action: ReduxActions.Action) => {
     return state + action.payload
   }
 }, 1)
-
-export default reducer;
