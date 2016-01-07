@@ -1,7 +1,16 @@
 import { Provider } from 'react-redux'
 import { Router } from 'react-router'
 
-export default class Root extends React.Component {
+interface Props extends React.Props {
+  history: HistoryModule.History;
+  routes: Route;
+  store: Function;
+}
+
+interface State {
+}
+
+export default class Root extends React.Component<Props, {}> {
   static propTypes = {
     history: React.PropTypes.object.isRequired,
     routes: React.PropTypes.element.isRequired,
