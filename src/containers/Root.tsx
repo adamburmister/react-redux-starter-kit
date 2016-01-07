@@ -1,7 +1,7 @@
 import { Provider } from 'react-redux'
 import { Router } from 'react-router'
 
-interface Props extends React.Props {
+interface Props extends React.Props<Root> {
   history: HistoryModule.History;
   routes: Route;
   store: Function;
