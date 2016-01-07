@@ -36,6 +36,8 @@ Node `^5.0.0`
 Features
 --------
 
+* [TypeScript](http://www.typescriptlang.org) (`1.7.5`)
+  * Add compile-time type checking to ES6 JavaScript
 * [React](https://github.com/facebook/react) (`^0.14.0`)
   * Includes react-addons-test-utils (`^0.14.0`)
 * [Redux](https://github.com/rackt/redux) (`^3.0.0`)
@@ -76,8 +78,8 @@ Getting Started
 Just clone the repo and install the necessary node modules:
 
 ```shell
-$ git clone https://github.com/davezuko/react-redux-starter-kit.git
-$ cd react-redux-starter-kit
+$ git clone https://github.com/adamburmister/react-redux-typescript-starter-kit.git
+$ cd react-redux-typescript-starter-kit
 $ npm install                   # Install Node modules listed in ./package.json (may take a while the first time)
 $ npm start                     # Compile and launch
 ```
