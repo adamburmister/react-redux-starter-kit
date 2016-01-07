@@ -39,8 +39,8 @@ export const actions = {
 // }, 1)
 
 let reducer = handleActions({
-  [COUNTER_INCREMENT]: function (state: Number, { payload }: ReduxActions.Action): Number {
-    return state + payload
+  [COUNTER_INCREMENT]: function (state: Number, action): Number {
+    return state + action.payload
   }
 }, 1)
 
