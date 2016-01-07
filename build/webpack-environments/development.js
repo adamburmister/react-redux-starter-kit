@@ -36,10 +36,7 @@ export default (webpackConfig) => {
     // configuration will break other tasks such as test:unit because Webpack
     // HMR is not enabled there, and these transforms require it.
     webpackConfig.module.loaders = webpackConfig.module.loaders.map(loader => {
-      if (
-        /babel/.test(loader.loader) &&
-        !~loader.query.presets.indexOf('react-hmre')
-      ) {
+      if (/babel/.test(loader.loader) && loader.query && !~loader.query.presets.indexOf('react-hmre')) {
         debug('Apply react-transform-hmre preset.')
         loader.query.presets.push('react-hmre')
       }

@@ -1,22 +1,43 @@
 {
   "compilerOptions": {
-    "experimentalDecorators": true,
+    "target": "ES6",
     "jsx": "preserve",
-    "module": "commonjs",
     "noEmit": true,
-    "noEmitOnError": true,
-    "preserveConstEnums": true,
-    "removeComments": false,
-    "sourceMap": true,
-    "target": "es5"
+    "experimentalDecorators": true
   },
   "exclude": [
     "node_modules"
   ],
+  "filesGlob": [
+    "./typings/**/*.d.ts",
+    "./custom_typings/*.ts"
+  ],
   "files": [
-    "typings/tsd.d.ts",
-    "custom_typings/redux-simple-router.d.ts",
-    "custom_typings/window.d.ts",
-    "src/main.tsx"
-  ]
+    "./typings/history/history.d.ts",
+    "./typings/react-redux/react-redux.d.ts",
+    "./typings/react-router/history.d.ts",
+    "./typings/react-router/react-router.d.ts",
+    "./typings/react/react-addons-create-fragment.d.ts",
+    "./typings/react/react-addons-css-transition-group.d.ts",
+    "./typings/react/react-addons-linked-state-mixin.d.ts",
+    "./typings/react/react-addons-perf.d.ts",
+    "./typings/react/react-addons-pure-render-mixin.d.ts",
+    "./typings/react/react-addons-test-utils.d.ts",
+    "./typings/react/react-addons-transition-group.d.ts",
+    "./typings/react/react-addons-update.d.ts",
+    "./typings/react/react-dom.d.ts",
+    "./typings/react/react-global.d.ts",
+    "./typings/react/react.d.ts",
+    "./typings/redux-actions/redux-actions.d.ts",
+    "./typings/redux-devtools/redux-devtools.d.ts",
+    "./typings/redux-thunk/redux-thunk.d.ts",
+    "./typings/redux/redux.d.ts",
+    "./typings/requirejs/require.d.ts",
+    "./typings/tsd.d.ts",
+    "./custom_typings/redux-simple-router.d.ts",
+    "./custom_typings/window.d.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
 }

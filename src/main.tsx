@@ -1,5 +1,3 @@
-declare const __BASENAME__: any;
-
 import { render } from 'react-dom'
 import { createHistory, useBasename } from 'history'
 import { syncReduxAndRouter } from 'redux-simple-router'

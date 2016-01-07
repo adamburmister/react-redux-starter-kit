@@ -46,8 +46,7 @@ const webpackConfig = {
         collapseWhitespace: true
       }
     }),
-    new webpack.ProvidePlugin(config.compiler_globals),
-    new webpack.optimize.UglifyJsPlugin()
+    new webpack.ProvidePlugin(config.compiler_globals)
   ],
   devtool: 'source-map',
   resolve: {
@@ -60,15 +59,22 @@ const webpackConfig = {
         test: /\.js$/,
         loader: 'eslint',
         exclude: /node_modules/
+      },
+      {
+        test: /\.ts(x?)$/,
+        loader: 'tslint',
+        include: paths.base(config.dir_client),
+        exclude: /node_modules/
       }
     ],
     loaders: [
       {
-        test: /\.ts|tsx$/,
-        loader: 'ts-loader'
+        test: /\.ts(x?)$/,
+        exclude: /node_modules/,
+        loaders: ['babel', 'ts']
       },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel',
 
@@ -130,6 +136,10 @@ const webpackConfig = {
   ],
   eslint: {
     configFile: paths.base('.eslintrc')
+  },
+  tslint: {
+    emitErrors: true,
+    failOnHint: true
   }
 }
 

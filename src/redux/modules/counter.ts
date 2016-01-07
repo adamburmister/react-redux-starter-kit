@@ -3,12 +3,12 @@ import { createAction, handleActions } from 'redux-actions'
 // ------------------------------------
 // Constants
 // ------------------------------------
-export const COUNTER_INCREMENT = 'COUNTER_INCREMENT'
+export const COUNTER_INCREMENT: string = 'COUNTER_INCREMENT'
 
 // ------------------------------------
 // Actions
 // ------------------------------------
-export const increment = createAction(COUNTER_INCREMENT, (value = 1) => value)
+export const increment: Function = createAction(COUNTER_INCREMENT, (value = 1) => value)
 
 // This is a thunk, meaning it is a function that immediately
 // returns a function for lazy evaluation. It is incredibly useful for
@@ -17,7 +17,7 @@ export const increment = createAction(COUNTER_INCREMENT, (value = 1) => value)
 // you'd probably want to dispatch an action of COUNTER_DOUBLE and let the
 // reducer take care of this logic.
 export const doubleAsync = () => {
-  return (dispatch, getState) => {
+  return (dispatch:Function, getState:Function) => {
     setTimeout(() => {
       dispatch(increment(getState().counter))
     }, 1000)
@@ -32,6 +32,16 @@ export const actions = {
 // ------------------------------------
 // Reducer
 // ------------------------------------
-export default handleActions({
-  [COUNTER_INCREMENT]: (state, { payload }) => state + payload
+// export default handleActions({
+//   [COUNTER_INCREMENT]: (state:Number, { payload }:ReduxActions.Action): Number => {
+//     return state + payload
+//   }
+// }, 1)
+
+let reducer: ReactRedux.MapDispatchToPropsObject = handleActions({
+  [COUNTER_INCREMENT]: function (state:Number, { payload }:ReduxActions.Action): Number {
+    return state + payload
+  }
 }, 1)
+
+export default reducer;
