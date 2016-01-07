@@ -31,13 +31,12 @@ Table of Contents
 Requirements
 ------------
 
-Node `^5.0.0`
+* Node `^5.0.0`
+* Typescript Definition Manager (TSD) `npm install -g tsd`
 
 Features
 --------
 
-* [TypeScript](http://www.typescriptlang.org) (`1.7.5`)
-  * Add compile-time type checking to ES6 JavaScript
 * [React](https://github.com/facebook/react) (`^0.14.0`)
   * Includes react-addons-test-utils (`^0.14.0`)
 * [Redux](https://github.com/rackt/redux) (`^3.0.0`)
@@ -81,6 +80,7 @@ Just clone the repo and install the necessary node modules:
 $ git clone https://github.com/adamburmister/react-redux-typescript-starter-kit.git
 $ cd react-redux-typescript-starter-kit
 $ npm install                   # Install Node modules listed in ./package.json (may take a while the first time)
+$ npm run tsd                   # Install supporting TypeScript definition files
 $ npm start                     # Compile and launch
 ```
 
@@ -135,6 +135,7 @@ The folder structure provided is only meant to serve as a guide, it is by no mea
 ├── build                    # All build-related configuration
 │   └── webpack              # Environment-specific configuration files for webpack
 ├── config                   # Project configuration settings
+├── custom_typings           # Custom TypeScript definitions
 ├── server                   # Koa application (uses webpack middleware)
 │   └── main.js              # Server application entry point
 ├── src                      # Application source code

@@ -5,14 +5,6 @@
     "noEmit": true,
     "experimentalDecorators": true
   },
-  "exclude": [
-    "dist",
-    "node_modules"
-  ],
-  "filesGlob": [
-    "./typings/**/*.d.ts",
-    "./custom_typings/*.ts"
-  ],
   "files": [
     "./typings/history/history.d.ts",
     "./typings/react-redux/react-redux.d.ts",
@@ -36,9 +28,6 @@
     "./typings/requirejs/require.d.ts",
     "./typings/tsd.d.ts",
     "./custom_typings/redux-simple-router.d.ts",
-    "./custom_typings/window.d.ts"
-  ],
-  "atom": {
-    "rewriteTsconfig": true
-  }
+    "./custom_typings/globals.d.ts"
+  ]
 }

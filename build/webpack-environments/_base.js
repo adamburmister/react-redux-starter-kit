@@ -48,7 +48,6 @@ const webpackConfig = {
     }),
     new webpack.ProvidePlugin(config.compiler_globals)
   ],
-  devtool: 'source-map',
   resolve: {
     root: paths.base(config.dir_client),
     extensions: ['', '.js', '.jsx', '.ts', '.tsx']
@@ -134,6 +133,9 @@ const webpackConfig = {
       }
     })
   ],
+  tsloader: {
+    configFileName: paths.base('tsconfig.json')
+  },
   eslint: {
     configFile: paths.base('.eslintrc')
   },
