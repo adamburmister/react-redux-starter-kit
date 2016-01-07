@@ -61,6 +61,9 @@
     },
     "redux-actions/redux-actions.d.ts": {
       "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+    },
+    "redux-devtools/redux-devtools.d.ts": {
+      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
     }
   }
 }
