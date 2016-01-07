@@ -8,7 +8,7 @@ export const COUNTER_INCREMENT = 'COUNTER_INCREMENT'
 // ------------------------------------
 // Actions
 // ------------------------------------
-export const increment: Function = createAction(COUNTER_INCREMENT, (value = 1) => value)
+export const increment: Redux.ActionCreator = createAction(COUNTER_INCREMENT, (value = 1) => value)
 
 // This is a thunk, meaning it is a function that immediately
 // returns a function for lazy evaluation. It is incredibly useful for
@@ -16,7 +16,7 @@ export const increment: Function = createAction(COUNTER_INCREMENT, (value = 1) =
 // NOTE: This is solely for demonstration purposes. In a real application,
 // you'd probably want to dispatch an action of COUNTER_DOUBLE and let the
 // reducer take care of this logic.
-export const doubleAsync = () => {
+export const doubleAsync: Redux.ActionCreator = () => {
   return (dispatch: Function, getState: Function) => {
     setTimeout(() => {
       dispatch(increment(getState().counter))

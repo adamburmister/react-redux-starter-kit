@@ -38,7 +38,7 @@ const webpackConfig = {
     new webpack.optimize.DedupePlugin(),
     new HtmlWebpackPlugin({
       template: paths.client('index.html'),
-      hash: false,
+      // hash: false,
       favicon: paths.client('static/favicon.ico'),
       filename: 'index.html',
       inject: 'body',
@@ -60,7 +60,7 @@ const webpackConfig = {
         exclude: /node_modules/
       },
       {
-        test: /\.ts(x?)$/,
+        test: /\.tsx?$/,
         loader: 'tslint',
         include: paths.base(config.dir_client),
         exclude: /node_modules/
@@ -68,7 +68,7 @@ const webpackConfig = {
     ],
     loaders: [
       {
-        test: /\.ts(x?)$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         loaders: ['babel', 'ts']
       },

@@ -28,7 +28,7 @@ export class HomeView extends React.Component<IHomeViewProps, {}> {
   render () {
     return (
       <div className='container text-center'>
-        <h1>Welcome to the React Redux Starter Kit</h1>
+        <h1>Welcome to the React Redux TypeScript Starter Kit</h1>
         <h2>
           Sample Counter:&nbsp;
           <span className={styles['counter--green']}>{this.props.counter}</span>
@@ -39,7 +39,7 @@ export class HomeView extends React.Component<IHomeViewProps, {}> {
         </button>
         <button className='btn btn-default'
                 onClick={this.props.doubleAsync}>
-          Double (Async)
+          Double it (Async)
         </button>
         <hr />
         <Link to='/about'>Go To About View</Link>
@@ -47,5 +47,12 @@ export class HomeView extends React.Component<IHomeViewProps, {}> {
     )
   }
 }
+
+// Argument of type '
+// {
+//  increment: Function;
+//  doubleAsync: () => (dispatch: Function, getState: Function) => void;
+// }'
+// is not assignable to parameter of type 'MapDispatchToPropsFunction | MapDispatchToPropsObject'.
 
 export default connect(mapStateToProps, counterActions)(HomeView)

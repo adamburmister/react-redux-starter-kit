@@ -11,6 +11,7 @@ export default function (compiler, publicPath) {
   return WebpackDevMiddleware(compiler, {
     publicPath,
     contentBase: paths.base(config.dir_client),
+    progress: true,
     hot: true,
     quiet: config.compiler_quiet,
     noInfo: config.compiler_quiet,
