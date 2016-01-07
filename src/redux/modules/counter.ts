@@ -3,7 +3,7 @@ import { createAction, handleActions } from 'redux-actions'
 // ------------------------------------
 // Constants
 // ------------------------------------
-export const COUNTER_INCREMENT: string = 'COUNTER_INCREMENT'
+export const COUNTER_INCREMENT = 'COUNTER_INCREMENT'
 
 // ------------------------------------
 // Actions
@@ -17,7 +17,7 @@ export const increment: Function = createAction(COUNTER_INCREMENT, (value = 1) =
 // you'd probably want to dispatch an action of COUNTER_DOUBLE and let the
 // reducer take care of this logic.
 export const doubleAsync = () => {
-  return (dispatch:Function, getState:Function) => {
+  return (dispatch: Function, getState: Function) => {
     setTimeout(() => {
       dispatch(increment(getState().counter))
     }, 1000)
@@ -38,8 +38,8 @@ export const actions = {
 //   }
 // }, 1)
 
-let reducer: ReactRedux.MapDispatchToPropsObject = handleActions({
-  [COUNTER_INCREMENT]: function (state:Number, { payload }:ReduxActions.Action): Number {
+let reducer = handleActions({
+  [COUNTER_INCREMENT]: function (state: Number, { payload }: ReduxActions.Action): Number {
     return state + payload
   }
 }, 1)

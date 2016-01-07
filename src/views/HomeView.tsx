@@ -8,7 +8,7 @@ let styles = require('!style!css!./HomeView.scss');
 
 interface IHomeViewProps extends React.Props<HomeView> {
   counter: Number;
-  doubleAsync: Function;
+  doubleAsync: React.MouseEventHandler;
   increment: Function;
 }
 

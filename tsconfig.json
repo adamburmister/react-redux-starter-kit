@@ -34,9 +34,20 @@
     "./typings/requirejs/require.d.ts",
     "./typings/tsd.d.ts",
     "./custom_typings/globals.d.ts",
+    "./custom_typings/redux-devtools.d.ts",
     "./custom_typings/redux-simple-router.d.ts",
-    "./src/mylib.ts",
-    "./src/main.tsx"
+    "./src/redux/configureStore.ts",
+    "./src/redux/modules/counter.ts",
+    "./src/redux/rootReducer.ts",
+    "./src/containers/DevTools.tsx",
+    "./src/containers/DevToolsWindow.tsx",
+    "./src/containers/Root.tsx",
+    "./src/layouts/CoreLayout.tsx",
+    "./src/main.tsx",
+    "./src/redux/utils/createDevToolsWindow.tsx",
+    "./src/routes/index.tsx",
+    "./src/views/AboutView.tsx",
+    "./src/views/HomeView.tsx"
   ],
   "atom": {
     "rewriteTsconfig": true
