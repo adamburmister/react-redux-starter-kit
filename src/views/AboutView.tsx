@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 
-export class AboutView extends React.Component {
+export class AboutView extends React.Component<{}, {}> {
   render () {
     return (
       <div className='container text-center'>

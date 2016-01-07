@@ -16,6 +16,7 @@
   "files": [
     "typings/tsd.d.ts",
     "custom_typings/redux-simple-router.d.ts",
+    "custom_typings/window.d.ts",
     "src/main.tsx"
   ]
 }

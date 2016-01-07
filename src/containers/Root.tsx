@@ -4,22 +4,16 @@ import { Router } from 'react-router'
 declare var __DEBUG__: Boolean;
 declare var __DEBUG_NEW_WINDOW__: Boolean;
 
-interface RootProps {
+interface IRootProps extends React.Props<Root> {
   history: HistoryModule.History;
-  routes: ReactRouter.Route;
-  store: Function;
+  routes: JSX.Element;
+  store: Redux.Store;
 }
 
-interface RootState {
+interface IRootState {
 }
 
-export default class Root extends React.Component<RootProps, RootState> {
-  static propTypes = {
-    history: React.PropTypes.object.isRequired,
-    routes: React.PropTypes.element.isRequired,
-    store: React.PropTypes.object.isRequired
-  }
-
+export default class Root extends React.Component<IRootProps, IRootState> {
   get content () {
     return (
       <Router history={this.props.history}>

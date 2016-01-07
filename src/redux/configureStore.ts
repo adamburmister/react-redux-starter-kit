@@ -6,6 +6,9 @@ import {
   createStore
 } from 'redux'
 
+declare var __DEBUG__: Boolean;
+declare var module: any;
+
 export default function configureStore (initialState) {
   let createStoreWithMiddleware
   const middleware = applyMiddleware(thunk)
@@ -21,9 +24,7 @@ export default function configureStore (initialState) {
     createStoreWithMiddleware = compose(middleware)
   }
 
-  const store = createStoreWithMiddleware(createStore)(
-    rootReducer, initialState
-  )
+  const store = createStoreWithMiddleware(createStore)(rootReducer, initialState)
   if (module.hot) {
     module.hot.accept('./rootReducer', () => {
       const nextRootReducer = require('./rootReducer').default
