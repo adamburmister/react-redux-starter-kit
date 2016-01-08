@@ -6,10 +6,10 @@ import { actions as counterActions } from '../redux/modules/counter'
 // https://github.com/TypeStrong/ts-loader#loading-other-resources-and-code-splitting
 let styles = require('!style!css!./HomeView.scss');
 
-interface IHomeViewProps extends React.Props<HomeView> {
-  counter: Number;
-  doubleAsync: React.MouseEventHandler;
-  increment: Function;
+export interface IHomeViewProps extends React.Props<HomeView> {
+  counter?: Number;
+  doubleAsync?: React.MouseEventHandler;
+  increment?: Function;
 }
 
 // We define mapStateToProps where we'd normally use

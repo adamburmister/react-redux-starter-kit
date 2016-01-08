@@ -6,7 +6,7 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "react/react.d.ts": {
-      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+      "commit": "ba257a9b91bc0de1bdd9091b6723194c905a902a"
     },
     "react/react-global.d.ts": {
       "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
@@ -33,7 +33,7 @@
       "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
     },
     "react/react-addons-test-utils.d.ts": {
-      "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
+      "commit": "ba257a9b91bc0de1bdd9091b6723194c905a902a"
     },
     "react/react-addons-update.d.ts": {
       "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
@@ -61,6 +61,24 @@
     },
     "webpack/webpack-env.d.ts": {
       "commit": "81b951f1ac437d1eb5ff5171a0bfa6c467634b13"
+    },
+    "mocha/mocha.d.ts": {
+      "commit": "ba257a9b91bc0de1bdd9091b6723194c905a902a"
+    },
+    "chai/chai.d.ts": {
+      "commit": "ba257a9b91bc0de1bdd9091b6723194c905a902a"
+    },
+    "assertion-error/assertion-error.d.ts": {
+      "commit": "ba257a9b91bc0de1bdd9091b6723194c905a902a"
+    },
+    "chai-as-promised/chai-as-promised.d.ts": {
+      "commit": "ba257a9b91bc0de1bdd9091b6723194c905a902a"
+    },
+    "promises-a-plus/promises-a-plus.d.ts": {
+      "commit": "ba257a9b91bc0de1bdd9091b6723194c905a902a"
+    },
+    "sinon/sinon.d.ts": {
+      "commit": "ba257a9b91bc0de1bdd9091b6723194c905a902a"
     }
   }
 }

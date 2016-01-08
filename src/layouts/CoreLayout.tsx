@@ -1,22 +1,23 @@
 require('!style!css!sass!../styles/core.scss')
 
-// Note: Stateless/function components *will not* hot reload!
-// react-transform *only* works on component classes.
-//
-// Since layouts rarely change, they are a good place to
-// leverage React's new Statelesss Functions:
-// https://facebook.github.io/react/docs/reusable-components.html#stateless-functions
-//
-// CoreLayout is a pure function of it's props, so we can
-// define it with a plain javascript function...
-function CoreLayout ({ children }) {
-  return (
-    <div className='page-container'>
-      <div className='view-container'>
-        {children}
+export interface ICoreLayoutProps {
+  children?: Array<any>;
+}
+
+export class CoreLayout extends React.Component<ICoreLayoutProps, {}> {
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    return (
+      <div className='page-container'>
+        <div className='view-container'>
+          {this.props.children}
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default CoreLayout

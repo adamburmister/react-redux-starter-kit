@@ -14,10 +14,18 @@
     "./typings/**/*.d.ts",
     "./custom_typings/**/*.d.ts",
     "./src/**/*.ts",
-    "./src/**/*.tsx"
+    "./src/**/*.tsx",
+    "./tests/**/*.spec.ts",
+    "./tests/**/*.spec.tsx"
   ],
   "files": [
+    "./typings/assert/assert.d.ts",
+    "./typings/assertion-error/assertion-error.d.ts",
+    "./typings/chai-as-promised/chai-as-promised.d.ts",
+    "./typings/chai/chai.d.ts",
     "./typings/history/history.d.ts",
+    "./typings/mocha/mocha.d.ts",
+    "./typings/promises-a-plus/promises-a-plus.d.ts",
     "./typings/react-redux/react-redux.d.ts",
     "./typings/react-router/history.d.ts",
     "./typings/react-router/react-router.d.ts",
