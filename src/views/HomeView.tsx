@@ -20,6 +20,7 @@ export interface IHomeViewProps extends React.Props<HomeView> {
 const mapStateToProps = (state: any) => ({
   counter: state.counter
 })
+// @connect((state: any) => ({ counter: state.counter }), counterActions)
 export class HomeView extends React.Component<IHomeViewProps, {}> {
   constructor(props) {
     super(props)
@@ -47,12 +48,5 @@ export class HomeView extends React.Component<IHomeViewProps, {}> {
     )
   }
 }
-
-// Argument of type '
-// {
-//  increment: Function;
-//  doubleAsync: () => (dispatch: Function, getState: Function) => void;
-// }'
-// is not assignable to parameter of type 'MapDispatchToPropsFunction | MapDispatchToPropsObject'.
 
 export default connect(mapStateToProps, counterActions)(HomeView)
