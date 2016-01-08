@@ -6,7 +6,6 @@ const debug = require('debug')('app:karma')
 debug('Create configuration.')
 
 const karmaConfig = {
-  debug: true,
   basePath: '../', // project root in relation to bin/karma.js
   files: [
     './node_modules/phantomjs-polyfill/bind-polyfill.js',

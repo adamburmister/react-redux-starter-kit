@@ -1,10 +1,9 @@
-import TestUtils = require('react-addons-test-utils')
+import * as TestUtils from 'react-addons-test-utils'
 import { bindActionCreators } from 'redux'
 import { HomeView, IHomeViewProps } from '../../src/views/HomeView'
 
 function shallowRender (component) {
   const renderer = TestUtils.createRenderer()
-
   renderer.render(component)
   return renderer.getRenderOutput()
 }
@@ -17,22 +16,25 @@ function shallowRenderWithProps (props: IHomeViewProps = {}) {
   return shallowRender(<HomeView {...props} />)
 }
 
-describe('(View) Home', () => {
+describe(`(View) Home`, function() {
   let _component: any,
-      _rendered: Function,
-      _props: Object,
-      _spies: Object
+      _rendered: React.Component<IHomeViewProps, any>,
+      _props: any = {},
+      _spies: any = {}
 
-  beforeEach(() => {
-    _spies = {}
-
-    _props = {
-      counter: 0,
-      ...bindActionCreators({
-        doubleAsync: (_spies.doubleAsync = sinon.spy()),
-        increment: (_spies.increment = sinon.spy())
-      }, _spies.dispatch = sinon.spy())
-    }
+  beforeEach(function() {
+    _props = Object.assign(
+      {
+        counter: 0
+      },
+      bindActionCreators<IHomeViewProps>(
+        {
+          doubleAsync: (_spies.doubleAsync = sinon.spy()),
+          increment: (_spies.increment = sinon.spy())
+        },
+        _spies.dispatch = sinon.spy()
+      )
+    )
 
     _component = shallowRenderWithProps(_props)
     _rendered = renderWithProps(_props)
@@ -58,7 +60,7 @@ describe('(View) Home', () => {
 
   it('Should render props.counter at the end of the sample counter <h2>.', function () {
     const h2 = TestUtils.findRenderedDOMComponentWithTag(
-      renderWithProps({ ..._props, counter: 5 }), 'h2'
+      renderWithProps(Object.assign(_props, { counter: 5 })), 'h2'
     )
 
     expect(h2).to.exist

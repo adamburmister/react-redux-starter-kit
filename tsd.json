@@ -79,6 +79,9 @@
     },
     "sinon/sinon.d.ts": {
       "commit": "ba257a9b91bc0de1bdd9091b6723194c905a902a"
+    },
+    "sinon-chai/sinon-chai.d.ts": {
+      "commit": "ba257a9b91bc0de1bdd9091b6723194c905a902a"
     }
   }
 }

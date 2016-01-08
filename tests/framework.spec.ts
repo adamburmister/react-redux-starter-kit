@@ -14,4 +14,9 @@ describe(`(Framework) Karma Plugins`, () => {
       expect(fail).to.not.be.fulfilled
     ])
   })
+
+  it(`Should have sinon`, () => {
+    expect(sinon).to.exist
+    expect(sinon.spy()).to.be.instanceof(Function)
+  })
 })
