@@ -20,6 +20,7 @@ export interface IHomeViewProps extends React.Props<HomeView> {
 const mapStateToProps = (state: any) => ({
   counter: state.counter
 })
+
 // @connect((state: any) => ({ counter: state.counter }), counterActions)
 export class HomeView extends React.Component<IHomeViewProps, {}> {
   constructor(props) {
