@@ -40,17 +40,20 @@
     "./typings/react/react-dom.d.ts",
     "./typings/react/react-global.d.ts",
     "./typings/react/react.d.ts",
+    "./typings/redux-actions/redux-actions.d.ts",
     "./typings/redux-devtools/redux-devtools.d.ts",
     "./typings/redux-thunk/redux-thunk.d.ts",
     "./typings/redux/redux.d.ts",
+    "./typings/sinon-chai/sinon-chai.d.ts",
+    "./typings/sinon/sinon.d.ts",
     "./typings/tsd.d.ts",
     "./typings/webpack/webpack-env.d.ts",
     "./custom_typings/globals.d.ts",
-    "./custom_typings/redux-actions.d.ts",
     "./custom_typings/redux-devtools-dock-monitor.d.ts",
     "./custom_typings/redux-devtools-log-monitor.d.ts",
     "./custom_typings/redux-devtools.d.ts",
     "./custom_typings/redux-simple-router.d.ts",
+    "./custom_typings/tests.d.ts",
     "./src/redux/configureStore.ts",
     "./src/redux/modules/counter.ts",
     "./src/redux/rootReducer.ts",
@@ -62,7 +65,10 @@
     "./src/redux/utils/createDevToolsWindow.tsx",
     "./src/routes/index.tsx",
     "./src/views/AboutView.tsx",
-    "./src/views/HomeView.tsx"
+    "./src/views/HomeView.tsx",
+    "./tests/framework.spec.ts",
+    "./tests/layouts/CoreLayout.spec.tsx",
+    "./tests/views/HomeView.spec.tsx"
   ],
   "atom": {
     "rewriteTsconfig": true

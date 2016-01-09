@@ -18,7 +18,6 @@
   "files": [
     "./../typings/tsd.d.ts",
     "./../custom_typings/globals.d.ts",
-    "./../custom_typings/redux-actions.d.ts",
     "./../custom_typings/redux-devtools-dock-monitor.d.ts",
     "./../custom_typings/redux-devtools-log-monitor.d.ts",
     "./../custom_typings/redux-devtools.d.ts",

@@ -1,5 +1,4 @@
 import { createAction, handleActions } from 'redux-actions'
-// import { MapDispatchToPropsObject } from 'react-redux'
 
 // ------------------------------------
 // Constants
