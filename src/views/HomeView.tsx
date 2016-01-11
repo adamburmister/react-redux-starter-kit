@@ -18,13 +18,19 @@ export interface IHomeViewProps extends React.Props<HomeView> {
 // export the decorated component after the main class definition so
 // the component can be tested w/ and w/o being connected.
 // See: http://rackt.github.io/redux/docs/recipes/WritingTests.html
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state: any): IHomeViewProps => ({
   counter: state.counter
+})
+
+// Which action creators does it want to receive by props?
+const mapDispatchToProps = (dispatch: Redux.Dispatch) => ({
+  onIncrement: () => dispatch(counterActions.increment()),
+  onDouble: () => dispatch(counterActions.doubleAsync()),
 })
 
 // @connect((state: any) => ({ counter: state.counter }), counterActions)
 export class HomeView extends React.Component<IHomeViewProps, {}> {
-  constructor(props) {
+  constructor(props: IHomeViewProps) {
     super(props)
   }
 
@@ -49,14 +55,6 @@ export class HomeView extends React.Component<IHomeViewProps, {}> {
       </div>
     )
   }
-}
-
-// Which action creators does it want to receive by props?
-function mapDispatchToProps(dispatch: Redux.Dispatch) {
-  return {
-    onIncrement: () => dispatch(counterActions.increment()),
-    onDouble: () => dispatch(counterActions.doubleAsync()),
-  };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeView)

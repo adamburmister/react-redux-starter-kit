@@ -1,7 +1,7 @@
 import { Provider } from 'react-redux'
 import DevTools from '../../containers/DevToolsWindow'
 
-export default function createDevToolsWindow (store) {
+export default function createDevToolsWindow (store: Redux.Store) {
   const win = window.open(
     null,
     'redux-devtools', // give it a name so it reuses the same window

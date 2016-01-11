@@ -23,6 +23,7 @@
       "timeEnd",
       "trace"
     ],
+    "no-any": true,
     "no-construct": true,
     "no-debugger": false,
     "no-duplicate-key": true,

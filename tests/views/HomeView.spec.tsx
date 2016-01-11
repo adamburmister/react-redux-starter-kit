@@ -2,27 +2,27 @@ import * as TestUtils from 'react-addons-test-utils'
 import { bindActionCreators } from 'redux'
 import { HomeView, IHomeViewProps } from '../../src/views/HomeView'
 
-function shallowRender (component) {
+function shallowRender (component: React.ReactElement<any>): React.ReactElement<any> {
   const renderer = TestUtils.createRenderer()
   renderer.render(component)
   return renderer.getRenderOutput()
 }
 
-function renderWithProps (props: IHomeViewProps = {}) {
+function renderWithProps (props: IHomeViewProps = {}): React.Component<any, any> {
   return TestUtils.renderIntoDocument(<HomeView {...props} />)
 }
 
-function shallowRenderWithProps (props: IHomeViewProps = {}) {
+function shallowRenderWithProps (props: IHomeViewProps = {}): React.ReactElement<any> {
   return shallowRender(<HomeView {...props} />)
 }
 
 describe(`(View) Home`, function() {
-  let _component: any,
+  let _component: React.ReactElement<any>,
       _rendered: React.Component<IHomeViewProps, any>,
-      _props: any = {},
+      _props: IHomeViewProps = {},
       _spies: any = {}
 
-  beforeEach(function() {
+  beforeEach(() => {
     _props = Object.assign(
       {
         counter: 0
@@ -68,7 +68,7 @@ describe(`(View) Home`, function() {
   })
 
   describe('An increment button...', function () {
-    let _btn
+    let _btn: Element
 
     beforeEach(() => {
       _btn = TestUtils.scryRenderedDOMComponentsWithTag(_rendered, 'button')
@@ -87,7 +87,7 @@ describe(`(View) Home`, function() {
   })
 
   describe('A Double (Async) button...', function () {
-    let _btn
+    let _btn: Element
 
     beforeEach(() => {
       _btn = TestUtils.scryRenderedDOMComponentsWithTag(_rendered, 'button')

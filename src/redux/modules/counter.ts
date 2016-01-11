@@ -34,7 +34,7 @@ export const actions = {
 // Reducer
 // ------------------------------------
 export default handleActions<Number>({
-  [COUNTER_INCREMENT]: (state, action: ReduxActions.Action) => {
+  [COUNTER_INCREMENT]: (state: Number, action: ReduxActions.Action) => {
     return state + action.payload
   }
 }, 1)

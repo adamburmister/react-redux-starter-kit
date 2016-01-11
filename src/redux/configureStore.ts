@@ -11,9 +11,9 @@ import {
 declare var __DEBUG__: Boolean;
 declare var module: any;
 
-export default function configureStore (initialState) {
-  let createStoreWithMiddleware
-  const middleware = applyMiddleware(thunk)
+export default function configureStore (initialState: Object) {
+  let createStoreWithMiddleware: Function
+  const middleware: Function = applyMiddleware(thunk)
 
   if (__DEBUG__) {
     createStoreWithMiddleware = compose(

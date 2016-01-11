@@ -5,7 +5,7 @@ export interface ICoreLayoutProps {
 }
 
 export class CoreLayout extends React.Component<ICoreLayoutProps, {}> {
-  constructor(props) {
+  constructor(props: ICoreLayoutProps) {
     super(props)
   }
 
