@@ -19,7 +19,6 @@
     "./tests/**/*.spec.tsx"
   ],
   "files": [
-    "./typings/assert/assert.d.ts",
     "./typings/assertion-error/assertion-error.d.ts",
     "./typings/chai-as-promised/chai-as-promised.d.ts",
     "./typings/chai/chai.d.ts",
