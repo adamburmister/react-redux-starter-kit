@@ -1,6 +1,7 @@
+/* tslint:disable */
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
-import counterActions from '../redux/modules/counter'
+import { actions as counterActions } from '../redux/modules/counter'
 
 // Load styles using require to make this valid TypeScript
 // https://github.com/TypeStrong/ts-loader#loading-other-resources-and-code-splitting
@@ -8,8 +9,8 @@ let styles = require('!style!css!./HomeView.scss');
 
 export interface IHomeViewProps extends React.Props<HomeView> {
   counter?: Number;
-  doubleAsync?: React.MouseEventHandler;
-  increment?: Function;
+  onDouble?: Function;
+  onIncrement?: Function;
 }
 
 // We define mapStateToProps where we'd normally use
@@ -36,11 +37,11 @@ export class HomeView extends React.Component<IHomeViewProps, {}> {
           <span className={styles['counter--green']}>{this.props.counter}</span>
         </h2>
         <button className='btn btn-default'
-                onClick={() => this.props.increment(1)}>
+                onClick={() => this.props.onIncrement(1)}>
           Increment
         </button>
         <button className='btn btn-default'
-                onClick={this.props.doubleAsync}>
+                onClick={this.props.onDouble.bind(this)}>
           Double it (Async)
         </button>
         <hr />
@@ -50,4 +51,12 @@ export class HomeView extends React.Component<IHomeViewProps, {}> {
   }
 }
 
-export default connect(mapStateToProps, counterActions)(HomeView)
+// Which action creators does it want to receive by props?
+function mapDispatchToProps(dispatch: Redux.Dispatch) {
+  return {
+    onIncrement: () => dispatch(counterActions.increment()),
+    onDouble: () => dispatch(counterActions.doubleAsync()),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomeView)
