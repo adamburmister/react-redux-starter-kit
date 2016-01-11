@@ -1,7 +1,7 @@
 require('!style!css!sass!../styles/core.scss')
 
 export interface ICoreLayoutProps {
-  children?: Array<any>;
+  children?: Array<JSX.Element>;
 }
 
 export class CoreLayout extends React.Component<ICoreLayoutProps, {}> {
