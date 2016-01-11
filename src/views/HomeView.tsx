@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
-import { actions as counterActions } from '../redux/modules/counter'
+import counterActions from '../redux/modules/counter'
 
 // Load styles using require to make this valid TypeScript
 // https://github.com/TypeStrong/ts-loader#loading-other-resources-and-code-splitting

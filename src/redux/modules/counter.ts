@@ -33,8 +33,15 @@ export const actions = {
 // ------------------------------------
 // Reducer
 // ------------------------------------
-export default handleActions<Number>({
-  [COUNTER_INCREMENT]: (state: Number, action: ReduxActions.Action) => {
-    return state + action.payload
-  }
-}, 1)
+// export default handleActions<Number>({
+//   [COUNTER_INCREMENT]: (state, action: ReduxActions.Action) => {
+//     return state + action.payload
+//   }
+// }, 1)
+
+// Which action creators does it want to receive by props?
+export default function mapDispatchToProps(dispatch: Redux.Dispatch) {
+  return {
+    onIncrement: () => dispatch(actions.increment())
+  };
+}
