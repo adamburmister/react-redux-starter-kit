@@ -70,7 +70,7 @@ const webpackConfig = {
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        loaders: ['babel', 'ts']
+        loaders: ['babel?presets[]=react-hmre', 'ts']
       },
       {
         test: /\.js$/,
