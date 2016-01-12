@@ -37,7 +37,7 @@ export class HomeView extends React.Component<IHomeViewProps, {}> {
   render () {
     return (
       <div className='container text-center'>
-        <h1>Welcome to the React Redux TypeScript Starter Kit</h1>
+        <h1>React Redux TypeScript Starter Kit</h1>
         <h2>
           Sample Counter:&nbsp;
           <span className={styles['counter--green']}>{this.props.counter}</span>

@@ -1,6 +1,7 @@
 /* eslint key-spacing:0 */
 import webpack from 'webpack'
 import config from '../../config'
+import { EXT_TS_TSX, EXT_JS_JSX } from './_base'
 import _debug from 'debug'
 
 const debug = _debug('app:webpack:development')
@@ -38,8 +39,18 @@ export default (webpackConfig) => {
     // HMR is not enabled there, and these transforms require it.
     webpackConfig.module.loaders = webpackConfig.module.loaders.map(loader => {
       if (/babel/.test(loader.loader) && !~loader.query.presets.indexOf('react-hmre')) {
-        debug('Apply react-transform-hmre preset.')
+        debug('Apply react-transform-hmre preset for Babel files.')
         loader.query.presets.push('react-hmre')
+      }
+
+      if (loader.test === EXT_TS_TSX) {
+        loader.loaders = loader.loaders.map(tsxLoader => {
+          if (/babel/.test(tsxLoader)) {
+            debug('Apply react-transform-hmre preset for TypeScript files.')
+            return 'babel?presets[]=react-hmre'
+          }
+          return tsxLoader
+        })
       }
 
       return loader

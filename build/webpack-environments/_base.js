@@ -18,6 +18,9 @@ const CSS_LOADER = !config.compiler_css_modules
     'localIdentName=[name]__[local]___[hash:base64:5]'
   ].join('&')
 
+export const EXT_TS_TSX = /\.tsx?$/
+export const EXT_JS_JSX = /\.jsx?$/
+
 const webpackConfig = {
   name: 'client',
   target: 'web',
@@ -55,12 +58,12 @@ const webpackConfig = {
   module: {
     preLoaders: [
       {
-        test: /\.js$/,
+        test: EXT_JS_JSX,
         loader: 'eslint',
         exclude: /node_modules/
       },
       {
-        test: /\.tsx?$/,
+        test: EXT_TS_TSX,
         loader: 'tslint',
         include: paths.base(config.dir_client),
         exclude: /node_modules/
@@ -68,12 +71,12 @@ const webpackConfig = {
     ],
     loaders: [
       {
-        test: /\.tsx?$/,
+        test: EXT_TS_TSX,
         exclude: /node_modules/,
-        loaders: ['babel?presets[]=react-hmre', 'ts']
+        loaders: ['babel', 'ts']
       },
       {
-        test: /\.js$/,
+        test: EXT_JS_JSX,
         exclude: /node_modules/,
         loader: 'babel',
 
