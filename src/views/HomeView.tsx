@@ -1,16 +1,15 @@
-/* tslint:disable */
 import { connect } from 'react-redux'
-import { ACTION as COUNTER_ACTIONS, increment, decrement, doubleAsync } from '../redux/actions/counter'
+import { increment, decrement, doubleAsync } from '../redux/actions/counter'
 
 // Load styles using require to make this valid TypeScript
 // https://github.com/TypeStrong/ts-loader#loading-other-resources-and-code-splitting
-let styles = require('!style!css!./HomeView.scss');
+const styles = require('!style!css!./HomeView.scss');
 
 export interface IHomeViewProps extends React.Props<HomeView> {
   counter?: Number;
+  onDecrement?: Function;
   onDouble?: Function;
   onIncrement?: Function;
-  onDecrement?: Function;
 }
 
 export interface IHomeViewState {
@@ -28,17 +27,13 @@ const mapStateToProps = (state: any): IHomeViewProps => ({
 
 // Which action creators does it want to receive by props?
 const mapDispatchToProps = (dispatch: Redux.Dispatch) => ({
-  onIncrement: () => dispatch(increment(1)),
   onDecrement: () => dispatch(decrement(1)),
   onDouble: () => dispatch(doubleAsync()),
+  onIncrement: () => dispatch(increment(1)),
 })
 
 // @connect(mapStateToProps, mapDispatchToProps)
 export class HomeView extends React.Component<IHomeViewProps, {}> {
-  constructor(props: IHomeViewProps) {
-    super(props)
-  }
-
   render () {
     return (
       <div className='container text-center'>
