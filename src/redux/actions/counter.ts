@@ -17,13 +17,13 @@ export interface ICounterAction {
   meta?: any;
 }
 
-export const increment = createAction(INCREMENT_COUNTER, (value = 1) => value)
-export const decrement = createAction(DECREMENT_COUNTER, (value = 1) => value)
+export const increment = createAction<number>(INCREMENT_COUNTER, (value = 1) => value)
+export const decrement = createAction<number>(DECREMENT_COUNTER, (value = 1) => value)
 
 export function doubleAsync(): Redux.ActionCreator {
   return (dispatch: Function, getState: Function) => {
     setTimeout(() => {
       dispatch(increment(getState().counter))
-    }, 1000)
+    }, 500)
   }
 }
