@@ -11,9 +11,6 @@ export class RouterNav extends React.Component<{}, {}> {
           <Link to='/about' activeClassName='active'>About</Link>
         </li>
         <li>
-          <Link to='/pinterest' activeClassName='active'>Pinterest</Link>
-        </li>
-        <li>
           <Link to='/missing123' activeClassName='active'>404</Link>
         </li>
       </ul>
