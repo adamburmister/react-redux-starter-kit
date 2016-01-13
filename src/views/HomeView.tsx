@@ -50,8 +50,6 @@ export class HomeView extends React.Component<IHomeViewProps, {}> {
                 onClick={this.props.onDouble.bind(this)}>
           Double it (Async)
         </button>
-        <hr />
-        <Link to='/about'>Go To About View</Link>
       </div>
     )
   }
