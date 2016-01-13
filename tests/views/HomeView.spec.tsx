@@ -48,7 +48,7 @@ describe(`(View) Home`, function() {
     const h1 = TestUtils.findRenderedDOMComponentWithTag(_rendered, 'h1')
 
     expect(h1).to.exist
-    expect(h1.textContent).to.match(/Welcome to the React Redux TypeScript Starter Kit/)
+    expect(h1.textContent).to.match(/Starter Kit/)
   })
 
   it('Should render with an <h2> that includes Sample Counter text.', function () {
