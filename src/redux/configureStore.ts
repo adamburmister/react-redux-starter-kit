@@ -29,7 +29,7 @@ export default function configureStore (initialState: Object) {
   const store = createStoreWithMiddleware(createStore)(rootReducer, initialState)
   if (module.hot) {
     module.hot.accept('./rootReducer', () => {
-      const nextRootReducer = require('./rootReducer') // ES6 module (AB: TODO: Is this an issue in TS?)
+      const nextRootReducer = require('./rootReducer')
       store.replaceReducer(nextRootReducer)
     })
   }
