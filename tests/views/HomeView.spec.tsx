@@ -30,7 +30,8 @@ describe(`(View) Home`, function() {
       bindActionCreators<IHomeViewProps>(
         {
           onDouble: (_spies.doubleAsync = sinon.spy()),
-          onIncrement: (_spies.increment = sinon.spy())
+          onIncrement: (_spies.increment = sinon.spy()),
+          onDecrement: (_spies.decrement = sinon.spy()),
         },
         _spies.dispatch = sinon.spy()
       )
