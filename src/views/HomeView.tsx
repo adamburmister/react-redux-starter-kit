@@ -1,13 +1,13 @@
-/* tslint:disable */
 import { connect } from 'react-redux'
-import { actions as counterActions } from '../redux/modules/counter'
+import { increment, decrement, doubleAsync } from '../redux/actions/counter'
 
 // Load styles using require to make this valid TypeScript
 // https://github.com/TypeStrong/ts-loader#loading-other-resources-and-code-splitting
-let styles = require('!style!css!./HomeView.scss');
+const styles = require('!style!css!./HomeView.scss');
 
 export interface IHomeViewProps extends React.Props<HomeView> {
   counter?: Number;
+  onDecrement?: Function;
   onDouble?: Function;
   onIncrement?: Function;
 }
@@ -23,27 +23,28 @@ const mapStateToProps = (state: any): IHomeViewProps => ({
 
 // Which action creators does it want to receive by props?
 const mapDispatchToProps = (dispatch: Redux.Dispatch) => ({
-  onIncrement: () => dispatch(counterActions.increment()),
-  onDouble: () => dispatch(counterActions.doubleAsync()),
+  onDecrement: () => dispatch(decrement(1)),
+  onDouble: () => dispatch(doubleAsync()),
+  onIncrement: () => dispatch(increment(1)),
 })
 
-// @connect((state: any) => ({ counter: state.counter }), counterActions)
+// @connect(mapStateToProps, mapDispatchToProps)
 export class HomeView extends React.Component<IHomeViewProps, {}> {
-  constructor(props: IHomeViewProps) {
-    super(props)
-  }
-
   render () {
     return (
       <div className='container text-center'>
         <h1>React Redux TypeScript Starter Kit</h1>
         <h2>
-          Sample Counter:&nbsp;
+          Counter:&nbsp;
           <span className={styles['counter--green']}>{this.props.counter}</span>
         </h2>
         <button className='btn btn-default'
-                onClick={() => this.props.onIncrement(1)}>
+                onClick={this.props.onIncrement.bind(this)}>
           Increment
+        </button>
+        <button className='btn btn-default'
+                onClick={this.props.onDecrement.bind(this)}>
+          Decrement
         </button>
         <button className='btn btn-default'
                 onClick={this.props.onDouble.bind(this)}>
