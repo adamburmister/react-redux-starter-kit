@@ -3,7 +3,7 @@ import { increment, decrement, doubleAsync } from '../redux/actions/counter'
 
 // Load styles using require to make this valid TypeScript
 // https://github.com/TypeStrong/ts-loader#loading-other-resources-and-code-splitting
-const styles = require('!style!css!./HomeView.scss')
+require('!style!css!./HomeView.scss')
 
 export interface IHomeViewProps extends React.Props<HomeView> {
   counter?: Number;
