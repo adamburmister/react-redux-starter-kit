@@ -94,6 +94,7 @@ const webpackConfig = {
       },
       {
         test: /\.scss$/,
+        exclude: /src/,
         loaders: [
           'style',
           CSS_LOADER,
@@ -102,10 +103,21 @@ const webpackConfig = {
         ]
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
+        exclude: /src/,
         loaders: [
           'style',
-          CSS_LOADER,
+          'css?sourceMap',
+          'postcss',
+          'sass'
+        ]
+      },
+      {
+        test: /\.css$/,
+        exclude: /src/,
+        loaders: [
+          'style',
+          'css?sourceMap',
           'postcss'
         ]
       },

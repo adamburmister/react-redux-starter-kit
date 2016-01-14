@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
-import { increment, decrement, doubleAsync } from '../redux/actions/counter'
+import { increment, decrement, doubleAsync } from '../../redux/actions/counter'
 
 // Load styles using require to make this valid TypeScript
 // https://github.com/TypeStrong/ts-loader#loading-other-resources-and-code-splitting
-require('!style!css!./HomeView.scss')
+const classes = require('!style!css-loader!./HomeView.scss')
 
 export interface IHomeViewProps extends React.Props<HomeView> {
   counter?: Number;
@@ -40,7 +40,7 @@ export class HomeView extends React.Component<IHomeViewProps, {}> {
         <h1>React Redux TypeScript Starter Kit</h1>
         <h2>
           Sample Counter:&nbsp;
-          <span className='counter'>{this.props.counter}</span>
+          <span className={classes['counter--green']}>{this.props.counter}</span>
         </h2>
         <button className='btn btn-default'
                 onClick={this.props.onIncrement.bind(this)}>

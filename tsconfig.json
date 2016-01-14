@@ -65,9 +65,9 @@
     "./src/main.tsx",
     "./src/redux/utils/createDevToolsWindow.tsx",
     "./src/routes/index.tsx",
-    "./src/views/AboutView.tsx",
-    "./src/views/HomeView.tsx",
-    "./src/views/NotFoundView.tsx",
+    "./src/views/AboutView/AboutView.tsx",
+    "./src/views/HomeView/HomeView.tsx",
+    "./src/views/NotFoundView/NotFoundView.tsx",
     "./tests/framework.spec.ts",
     "./tests/layouts/CoreLayout.spec.tsx",
     "./tests/views/HomeView.spec.tsx"
