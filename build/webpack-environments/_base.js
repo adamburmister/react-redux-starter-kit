@@ -53,9 +53,20 @@ const webpackConfig = {
   ],
   resolve: {
     root: paths.base(config.dir_client),
-    extensions: ['', '.js', '.jsx', '.ts', '.tsx']
+    extensions: ['', '.js', '.jsx', '.ts', '.tsx'],
+    alias: {
+      'sinon': 'sinon/pkg/sinon'
+    }
+  },
+  externals: {
+    'jsdom': 'window',
+    'cheerio': 'window',
+    'react/lib/ExecutionEnvironment': true
   },
   module: {
+    noParse: [
+      /node_modules\/sinon\//,
+    ],
     preLoaders: [
       {
         test: EXT_JS_JSX,
@@ -65,14 +76,12 @@ const webpackConfig = {
       {
         test: EXT_TS_TSX,
         loader: 'tslint',
-        include: paths.base(config.dir_client),
-        exclude: /node_modules/
+        include: paths.base(config.dir_client)
       }
     ],
     loaders: [
       {
         test: EXT_TS_TSX,
-        exclude: /node_modules/,
         loaders: ['babel', 'ts']
       },
       {

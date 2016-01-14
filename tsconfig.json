@@ -23,6 +23,7 @@
     "./typings/chai-as-promised/chai-as-promised.d.ts",
     "./typings/chai/chai.d.ts",
     "./typings/history/history.d.ts",
+    "./typings/enzyme/enzyme.d.ts",
     "./typings/mocha/mocha.d.ts",
     "./typings/promises-a-plus/promises-a-plus.d.ts",
     "./typings/react-redux/react-redux.d.ts",

@@ -6,7 +6,7 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "react/react.d.ts": {
-      "commit": "ba257a9b91bc0de1bdd9091b6723194c905a902a"
+      "commit": "d1f6bde13f2209be42e86c3686761e8bfcbb50a5"
     },
     "react/react-global.d.ts": {
       "commit": "f11e49cfb77f99678657ddfe5d43017849675c64"
@@ -85,6 +85,9 @@
     },
     "redux-actions/redux-actions.d.ts": {
       "commit": "ba257a9b91bc0de1bdd9091b6723194c905a902a"
+    },
+    "enzyme/enzyme.d.ts": {
+      "commit": "d1f6bde13f2209be42e86c3686761e8bfcbb50a5"
     }
   }
 }

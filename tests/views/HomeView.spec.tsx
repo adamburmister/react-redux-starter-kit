@@ -1,6 +1,9 @@
 import * as TestUtils from 'react-addons-test-utils'
+import { shallow } from 'enzyme';
 import { bindActionCreators } from 'redux'
 import { HomeView, IHomeViewProps } from '../../src/views/HomeView/HomeView'
+
+const wrapper = shallow(<HomeView />);
 
 function shallowRender (component: React.ReactElement<any>): React.ReactElement<any> {
   const renderer = TestUtils.createRenderer()
