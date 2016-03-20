@@ -8,7 +8,7 @@ function shallowRender (component: React.ReactElement<any>): React.ReactElement<
   return renderer.getRenderOutput()
 }
 
-function renderWithProps (props: IHomeViewProps = {}): React.Component<any, any> {
+function renderWithProps (props: IHomeViewProps = {}): any {
   return TestUtils.renderIntoDocument(<HomeView {...props} />)
 }
 

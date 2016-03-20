@@ -73,7 +73,7 @@ const webpackConfig = {
       {
         test: EXT_TS_TSX,
         exclude: /node_modules/,
-        loaders: ['babel', 'ts']
+        loaders: ['babel', 'ts?noEmit=true']
       },
       {
         test: EXT_JS_JSX,
@@ -165,9 +165,9 @@ const webpackConfig = {
 // http://stackoverflow.com/questions/34133808/webpack-ots-parsing-error-loading-fonts/34133809#34133809
 if (!config.compiler_enable_hmr) {
   debug('Apply ExtractTextPlugin to CSS loaders.')
-  webpackConfig.module.loaders.filter(loader =>
-    loader.loaders && loader.loaders.find(name => /css/.test(name.split('?')[0]))
-  ).forEach(loader => {
+  webpackConfig.module.loaders.filter((loader) =>
+    loader.loaders && loader.loaders.find((name) => /css/.test(name.split('?')[0]))
+  ).forEach((loader) => {
     const [first, ...rest] = loader.loaders
     loader.loader = ExtractTextPlugin.extract(first, rest.join('!'))
     delete loader.loaders
