@@ -48,6 +48,7 @@
     "./typings/tsd.d.ts",
     "./typings/webpack/webpack-env.d.ts",
     "./custom_typings/globals.d.ts",
+    "./custom_typings/react-router-redux.d.ts",
     "./custom_typings/redux-devtools-dock-monitor.d.ts",
     "./custom_typings/redux-devtools-log-monitor.d.ts",
     "./custom_typings/redux-devtools.d.ts",

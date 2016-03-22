@@ -9,26 +9,18 @@ import {
   createStore
 } from 'redux'
 
-declare var __DEBUG__: Boolean;
-declare var module: any;
-
-export default function configureStore (initialState: Object, history: any) {
-  let createStoreWithMiddleware: Function
+export default function configureStore (initialState = {}, history: any) {
   // Compose final middleware and use devtools in debug environment
-  const middleware: Function = applyMiddleware(thunk, routerMiddleware(history))
-
+  let middleware = applyMiddleware(thunk, routerMiddleware(history))
   if (__DEBUG__) {
-    createStoreWithMiddleware = compose(
-      middleware,
-      window.devToolsExtension
-        ? window.devToolsExtension()
-        : DevTools.instrument() // ES6 module
-    )
-  } else {
-    createStoreWithMiddleware = compose(middleware)
+    const devTools = window.devToolsExtension
+      ? window.devToolsExtension()
+      : DevTools.instrument() // ES6 module
+    middleware = compose(middleware, devTools)
   }
 
-  const store = createStoreWithMiddleware(createStore)(rootReducer, initialState)
+  const store = middleware(createStore)(rootReducer, initialState)
+
   if (module.hot) {
     module.hot.accept('../reducers', () => {
       const nextRootReducer = require('../reducers')

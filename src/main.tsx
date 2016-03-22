@@ -1,13 +1,16 @@
 import { render } from 'react-dom'
 import { useRouterHistory } from 'react-router'
+import { createMemoryHistory } from 'history'
 import createBrowserHistory from 'history/lib/createBrowserHistory'
 import { syncHistoryWithStore } from 'react-router-redux'
 import makeRoutes from './routes/index'
 import Root from './containers/Root'
 import configureStore from './redux/store/configureStore'
 
+let historyStrategy = createMemoryHistory || createBrowserHistory
+
 // Configure history for react-router
-const browserHistory = useRouterHistory(createBrowserHistory)({
+const browserHistory = useRouterHistory(historyStrategy)({
   basename: __BASENAME__
 })
 
