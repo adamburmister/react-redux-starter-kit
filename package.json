@@ -9,7 +9,7 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "tsd": "tsd reinstall",
+    "tsd": "tsd reinstall --overwrite --save",
     "compile": "npm run clean && node -r dotenv/config --harmony bin/compile",
     "lint": "eslint . ./",
     "lint:fix": "npm run lint -- --fix",
